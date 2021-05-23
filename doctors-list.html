@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Medilord</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+<link href="css/styles.1971f200fc7de288317d.css" rel="stylesheet">
+<link href="css/common.css" rel="stylesheet">
+</head>
+<body class="bg-light"> 
+<div class="container-fluid headBG">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-1 mb-4">
+      <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+        <img src="images/medilord-logo.png" class="logo" alt="Medilord Logo">
+        <!-- <svg class="bi me-2" width="40" height="32" fill="purple" role="img" aria-label="Medilord"><use xlink:href="#speedometer2"></use></svg> -->
+      </a>
+
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mainNav mb-md-0">
+        <li><a href="index.html" class="nav-link px-2" >Home</a></li>
+        <li><a href="doctors-list.html" class="nav-link px-2 active" >Doctor</a></li>
+        <li><a href="services.html" class="nav-link px-2" >Services</a></li>
+        <li><a href="how-it-works.html" class="nav-link px-2" >How it works</a></li>
+        <li><a href="contact-us.html" class="nav-link px-2" >Contact us</a></li>
+      </ul>
+
+      <div class="col-md-3 text-end">
+        <button type="button" class="btn btn-primary me-2">Sign-up</button>
+        <button type="button" class="btn btn-outline-primary">Login</button>
+       
+      </div>
+    </header>
+  </div>
+<div class="container-md">
+   
+  <div class="my-2"><input class="form-control searcBox" placeholder="search by doctor name" [(ngModel)]="searchDocField"></div>
+  <div id="drPanel">
+
+  </div>
+  <script id="mp_template" type="text/template">
+{{#.}}
+  <div class="my-3 p-3 bg-body rounded shadow-sm d-flex">
+    <div class="bd-placeholder-img flex-shrink-0 me-2 rounded pBG"><i class="fa fa-user"></i></div>
+    <div class="text-muted pt-3 px-2 col-7">
+      <h4 class="mb-0">{{name}}</h4>
+      <h6 class="mb-2">{{qualifications}}</h6>
+      <p class="mb-0 small lh-sm">
+        <strong class="text-gray-dark">Practice Areas:</strong><span>
+          {{specialist}}</span>
+      </p>
+      <p class="mb-1 small lh-sm"> <strong class="text-gray-dark">Languages Areas:</strong><span > {{languages}} </span> </p>
+          <div class="starrating risingstar d-flex flex-row-reverse justify-content-end">- {{ratings.length}} ratings
+            <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 star"></label>
+            <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 star"></label>
+            <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 star"></label>
+            <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 star"></label>
+            <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 star"></label>
+             
+        </div>  
+      </div>
+    <div class="d-flex flex-column justify-content-center">
+      <a class="btn btn-primary" href="contact-us.html">Request Appointment</a>
+      <h6 class="mt-2 mb-3 text-center">Visit Fee: <span class="text-primary">{{costPerAppointment}}</span></h6>
+    </div>
+  </div> 
+{{/.}}
+</script>
+   <!-- <ng-template #noResults>
+    <p>No results found for "{{searchText}}".</p>
+  </ng-template> -->
+
+
+<div class="container-fluid footerBG">
+  <footer class="container py-3 mt-3">
+    <div class="row">
+        <div class="col-md-4">
+      <a href="/" class="d-flex mb-2 mb-md-0 text-dark text-decoration-none">
+      <img src="images/medilord-logo.png" class="logo" alt="Medilord Logo">
+      <!-- <svg class="bi me-2" width="40" height="32" fill="purple" role="img" aria-label="Medilord"><use xlink:href="#speedometer2"></use></svg> -->
+    </a>
+  </div>
+    <div class="col-md-4 px-3">
+        <h4>Quick Links:</h4>
+    <ul class="nav mb-2 footerNav mb-md-0">
+      <li><a href="index.html" class="nav-link" >Home</a></li>
+      <li><a href="doctors-list.html" class="nav-link" >Doctor</a></li>
+      <li><a href="services.html" class="nav-link" >Services</a></li>
+      <li><a href="how-it-works.html" class="nav-link" >How it works</a></li>
+      <li><a href="contact-us.html" class="nav-link px-2">Contact us</a></li>
+    </ul>
+  </div>
+    <div class="col-md-4">
+        <h4> Social Links:</h4>
+        <div class="mb-4 socialLinks">
+            <a href="#" class="fa fa-facebook-square fs-4 mx-1 text-decoration-none"></a>
+          <a href="#" class="fa fa-twitter-square fs-4 mx-1 text-decoration-none"></a>
+          <a href="#" class="fa fa-instagram fs-4 mx-1 text-decoration-none"></a>
+          <a href="#" class="fa fa-youtube fs-4 mx-1 text-decoration-none"></a>
+      </div>
+      <button type="button" class="btn btn-primary me-2">Sign-up</button>
+      <button type="button" class="btn btn-outline-light">Login</button>
+  </div>
+  <div class="col-md-12 border-top mt-3">
+      <p class="text-center copyrightTxt pt-2 mb-0">Copyright © 2021, Medilord. All rights reserved.</p>
+  </div>
+    </div>
+  </footer>
+</div>
+<script>
+  $(document).ready(function(){
+    $.getJSON('json/doctorlist.json', function (doctors) {
+
+var template = $("#mp_template").html();
+var text = Mustache.render(template, doctors);
+
+$("#drPanel").html(text);
+});
+  })
+</script>
+</body>
+</html>

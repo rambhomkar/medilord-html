@@ -1,0 +1,154 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* @import '~bootstrap/scss/bootstrap';
+@import '../node_modules/font-awesome/css/font-awesome.css' ; */
+
+.headBG {
+    background-color:var(--bs-white);
+}
+.headBG .logo{
+        height:60px;
+    }
+
+.mainNav li a{
+        color: #6c757d;
+        text-transform: uppercase;
+        border-bottom: 2px solid #fff;
+        margin: 0 2px;
+    }
+    .mainNav li a:hover,.mainNav li a.active{
+        color:#660099;
+        border-bottom:2px solid #660099;}
+     
+.text-gold {
+    color:#cc9933;
+}
+.searcBox{
+    border-radius: 50px;
+    border:2px solid #660099;
+    color:#9d83cc;
+}
+.searcBox:focus{box-shadow:0 0 0 0.25rem rgb(111 66 193 / 25%)}
+
+.covidLink{
+    color:#660099;
+}
+.sTitle{
+    color: var(--bs-blue);
+}
+
+.spBoxes > div{
+        background-color: #dfd4f5;
+        border-radius: 10px;
+        color:#676767; 
+}
+.spBoxes > div h4{
+            color:#660099;
+        }
+    
+.imgWrap{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.imgWrap img{
+    width: 120px;
+    height: 120px;
+}
+/* Doctor list Page */
+mat-grid-tile {
+    background: lightblue;
+  }
+  .starrating > input {display: none;}  /* Remove radio buttons */
+  .bg-body.rounded{
+    border:2px solid #fff;
+  }
+  .bg-body.rounded:hover{
+    border:2px solid #660099;
+  }
+  .starrating > label:before { 
+    content: "\f005"; /* Star */
+    margin: 2px;
+    font-size: 1em;
+    font-family: FontAwesome;
+    display: inline-block; 
+  }
+  i.fa-user:before { 
+    content: "\f0f0"; /* Star */
+    margin: 2px;
+    font-size: 10em;
+    font-family: FontAwesome;
+    display: inline-block; 
+    font-style: normal;
+  }
+  .pBG{ background: #e2d7f7;/*#660099;*/ 
+  color: #fff;
+  height: 150px;
+  width: 150px;
+  line-height: 150px;
+  padding: 2px 10px;
+}
+  
+  .starrating > label
+  {
+    color: #222222; /* Start color when not clicked */
+  }
+  
+  .starrating > input:checked ~ label
+  { color: #ffca08 ; } /* Set yellow color when star checked */
+  
+  .starrating > input:hover ~ label
+  { color: #ffca08 ;  } /* Set yellow color when star hover */
+   
+  .mHead{
+    color:#660099;
+}
+a.btn{
+    width: fit-content;
+}
+ 
+.bannerImg{
+    background:#393939 url('./../images/img-how-it-works-banner.jpg') no-repeat center center;
+    min-height: 250px;
+    padding-top: 50px;}
+.bannerImg p{
+        text-align: center;
+        font-size: 40px;
+        width: 33.339%;
+        margin: 0 auto;
+        color: #fff;
+    }
+
+/* Footer CSS */
+.footerBG{
+    background-color:#897f92; 
+}
+.footerBG h4{
+    font-size: 18px;
+}
+.footerBG .log0{
+    height: 55px;
+}
+.footerBG .socialLinks a{
+    color:#fff;
+}
+.footerBG .footerNav li {
+    display: block;
+    width: 100%;
+}
+.footerBG .footerNav li  a{
+    color:#fff; 
+    padding: 3px 5px; 
+}
+
+.footerBG .copyrightTxt{
+    font-size: 12px;
+    color:#fff;
+}
